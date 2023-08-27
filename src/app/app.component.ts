@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Store } from './store';
+import { Item } from './item';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Organizer';
+  stores!: Store[];
+  items!: Item[];
 }
