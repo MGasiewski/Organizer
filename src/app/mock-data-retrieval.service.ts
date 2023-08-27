@@ -16,14 +16,20 @@ export class MockDataRetrievalService implements DataRetrieval {
   }
   getItems(store: Store): Item[] {
     return [
-      new Item("")
-    ]
+      new Item("Hat", 1, false, new Store("Target", "Carlisle Pike")),
+      new Item("Socks", 1, false, new Store("Target", "Carlisle Pike")),
+      new Item("Pants", 1, false, new Store("Target", "Carlisle Pike")),
+      new Item("Hammer", 1, false, new Store("Lowe's", "Carlisle Pike")),
+      new Item("Screwdriver", 1, false, new Store("Lowe's", "Carlisle Pike"))
+    ].filter(item => item.store.name == store.name);
   }
   addItem(item: Item): boolean {
-    throw new Error('Method not implemented.');
+    console.log("mock add item");
+    return true;
   }
-  deleteItem(item: Item): void {
-    throw new Error('Method not implemented.');
+  deleteItem(item: Item): boolean {
+    console.log("mock delete item");
+    return true;
   }
 
 }

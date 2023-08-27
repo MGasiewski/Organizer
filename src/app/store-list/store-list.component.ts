@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Store } from '../store';
+import { MockDataRetrievalService } from '../mock-data-retrieval.service';
+import { Item } from '../item';
 
 @Component({
   selector: 'app-store-list',
@@ -9,4 +11,10 @@ import { Store } from '../store';
 export class StoreListComponent {
   @Input()
   store!: Store;
+  items!: Item[];
+  constructor(private mockDataService: MockDataRetrievalService) {}
+  ngOnInit(){
+    this.items = this.mockDataService.getItems(this.store);
+    console.log(this.items);
+  }
 }

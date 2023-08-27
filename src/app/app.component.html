@@ -1,6 +1,6 @@
 <head>
   <app-organizer-header></app-organizer-header>
 </head>
-<div *ngFor="let store in stores">
+<div *ngFor="let store of stores">
   <app-store-list [store]="store"></app-store-list>
 </div>
