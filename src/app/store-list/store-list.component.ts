@@ -17,4 +17,15 @@ export class StoreListComponent {
     this.items = this.mockDataService.getItems(this.store);
     console.log(this.items);
   }
+
+  checkItem(){
+
+  }
+
+  deleteItem(item: Item): boolean{
+    return this.mockDataService.deleteItem(item);
+  }
+
+  editItem(){
+  }
 }

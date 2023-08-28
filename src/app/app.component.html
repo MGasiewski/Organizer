@@ -1,6 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <app-organizer-header></app-organizer-header>
+  <title>Organizer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<div *ngFor="let store of stores">
-  <app-store-list [store]="store"></app-store-list>
-</div>
+
+<body class="container-lg">
+  <app-organizer-header></app-organizer-header>
+  <div *ngFor="let store of stores">
+    <br>
+    <app-store-list [store]="store"></app-store-list>
+    <br>
+  </div>
+</body>

@@ -1,4 +1,24 @@
-<p>{{store.name}}</p>
-<div *ngFor="let item of items">
-  <app-list-item [item]="item"></app-list-item>
-</div>
+<h2>{{store.name}}</h2>
+<table class="table table-striped container-sm">
+  <thead>
+    <tr>
+      <th style="width:50px" scope="col">Check</th>
+      <th style="width:50px" scope="col">Delete</th>
+      <th scope="col">Name</th>
+      <th style="width:50px" scope="col">Quantity</th>
+      <th style="width:50px" scope="col">Edit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let item of items">
+      <tr>
+        <td><button class="btn btn-primary" click="checkItem()">&#x2713;</button></td>
+        <td><button class="btn btn-primary" click="deleteItem()">&#x2717;</button></td>
+        <td>{{item.name}}</td>
+        <td>{{item.quantity}}</td>
+        <td><button class="btn btn-primary" click="editItem(item)">edit</button></td>
+      </tr>
+    </ng-container>
+  </tbody>
+</table>
+<button class="btn btn-primary">Add Item</button>

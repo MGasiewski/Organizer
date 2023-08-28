@@ -5,14 +5,17 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { OrganizerHeaderComponent } from './organizer-header/organizer-header.component';
 import { StoreListComponent } from './store-list/store-list.component';
-import { ListItemComponent } from './list-item/list-item.component';
+import { EditModalComponent } from './edit-modal/edit-modal.component';
+import { AddModalComponent } from './add-modal/add-modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OrganizerHeaderComponent,
     StoreListComponent,
-    ListItemComponent  ],
+    EditModalComponent,
+    AddModalComponent,
+],
   imports: [
     BrowserModule,
     NgbModule
